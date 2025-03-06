@@ -1,0 +1,17 @@
+How to Fix Mirrorlist and DNS:
+Mirrorlist:
+first run
+su
+then edit the mirrorlist with
+nano /etc/pacman.d/mirrorlist
+and find your region and uncomment your server.
+DNS:
+first run
+su
+then run this command
+rm /etc/resolv.conf
+then do
+nano /etc/resolv.conf
+and add these lines:
+nameserver 8.8.8.8
+nameserver 8.8.4.4
