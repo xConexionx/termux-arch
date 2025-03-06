@@ -12,8 +12,7 @@ cd ~/arch2
 wget http://os.archlinuxarm.org/os/ArchLinuxARM-am33x-latest.tar.gz
 tar -xzf ArchLinuxARM-am33x-latest.tar.gz
 rm ArchLinuxARM-am33x-latest.tar.gz
-echo "unset LD_PRELOAD" > $PREFIX/bin/start-arch
-echo "proot -r ~/arch2 -0 -b /proc:/proc -b /sys:/sys" > $PREFIX/bin/start-arch
+echo -e "unset LD_PRELOAD\nproot -r ~/arch2 -0 -b /proc:/proc -b /sys:/sys" > $PREFIX/bin/start-arch
 chmod +x $PREFIX/bin/start-arch
 clear
 echo "Install complete! Run the start-arch command to launch arch!"
